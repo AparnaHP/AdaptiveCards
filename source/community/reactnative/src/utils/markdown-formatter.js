@@ -228,10 +228,7 @@ export default class MarkdownFormatter extends React.PureComponent {
 		if (this.matchesFound.length < 1) {
 
 			jsxArray.push(remainingText.split('\\n').map(value => {
-				return 
-				(<Text key={'text'} style={this.userStyles} numberOfLines={this.numberOfLines}>
-				{value}
-				</Text>);
+				return <Text key={'text'} style={this.userStyles} numberOfLines={this.numberOfLines}>{value}</Text>
 			}));
 			
 		} else {
