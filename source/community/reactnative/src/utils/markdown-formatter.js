@@ -226,11 +226,14 @@ export default class MarkdownFormatter extends React.PureComponent {
 		let sortedMatchedIndices = [...this.matchedIndices].sort(function (a, b) { return a - b });
 
 		if (this.matchesFound.length < 1) {
-			jsxArray.push(
-				<Text key={'text'} style={this.userStyles} numberOfLines={this.numberOfLines}>
-					{remainingText}
-				</Text>
-			);
+
+			jsxArray.push(remainingText.split('\\n').map(value => {
+				return 
+				(<Text key={'text'} style={this.userStyles} numberOfLines={this.numberOfLines}>
+				{value}
+				</Text>);
+			}));
+			
 		} else {
 			// let lastIdx = -1;
 			for (var i = 0; i <= this.matchedIndices.length - 1; i++) {
