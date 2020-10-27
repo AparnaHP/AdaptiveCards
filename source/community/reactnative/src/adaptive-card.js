@@ -184,7 +184,7 @@ export default class AdaptiveCard extends React.Component {
 					: undefined}>
 					<ContainerWrapper style={containerStyles} json={this.state.cardModel}>
 						<ScrollView
-							keyboardShouldPersistTaps="always"
+							keyboardShouldPersistTaps="handled"
 							showsHorizontalScrollIndicator={true}
 							showsVerticalScrollIndicator={true}
 							alwaysBounceVertical={false}
